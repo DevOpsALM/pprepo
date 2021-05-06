@@ -1,0 +1,14 @@
+name: Do Something That Needs Scheduled
+
+on:
+  repository_dispatch:
+    types: invokewf
+
+jobs:
+  build:
+    name: print resource group
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Do Something Based On Triggered Event Data
+        run: 'echo "Triggered event text: ${{ github.event.client_payload.resourcegroup }}"'
