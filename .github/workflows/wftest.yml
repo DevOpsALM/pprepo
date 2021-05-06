@@ -11,4 +11,4 @@ jobs:
     steps:
 
       - name: Do Something Based On Triggered Event Data
-        run: 'echo "Triggered event text"'
+        run: 'echo "Triggered event text: ${{ github.event.client_payload.version }}"'
